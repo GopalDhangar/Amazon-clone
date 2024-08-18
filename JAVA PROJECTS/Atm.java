@@ -13,7 +13,7 @@ public class Atm {
         System.out.println("Enter the amount less than balance to be withdraw :");
         Scanner sc = new Scanner(System.in);
         int amount = sc.nextInt();
-        if (amount < balance) {
+        if (amount <= balance) {
             balance -= amount;
             System.out.println("Balance after withdrwa :" + balance);
         } else {
