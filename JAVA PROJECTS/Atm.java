@@ -5,26 +5,25 @@ public class Atm {
     final int pin = 1234;
 
     public static void checkBalance() {
-        System.out.println("Balnce in your account is: " + balance);
+        System.out.println("Balance in your account is: " + balance);
         menu();
     }
 
     public static void withdrawMoney() {
-        System.out.println("Enter the amount to be withdraw");
+        System.out.println("Enter the amount less than balance to be withdraw :");
         Scanner sc = new Scanner(System.in);
         int amount = sc.nextInt();
         if (amount < balance) {
             balance -= amount;
             System.out.println("Balance after withdrwa :" + balance);
         } else {
-            System.out.println("Eneter amount less tahn balance");
             withdrawMoney();
         }
         menu();
     }
 
     public static void depositMoney() {
-        System.out.println("Enter the amount to be deposit");
+        System.out.println("Enter the amount to be deposit: ");
         Scanner sc = new Scanner(System.in);
         int amount = sc.nextInt();
         balance += amount;
@@ -38,7 +37,7 @@ public class Atm {
     }
 
     public static void menu() {
-        System.out.println("enter your choice: ");
+        System.out.println("Enter Your Choice: ");
         System.out.println("1. Check A/C Balance.");
         System.out.println("2. Withdraw Money.");
         System.out.println("3. Deposit Money.");
@@ -57,12 +56,12 @@ public class Atm {
 
     public void checkPin() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a valid pin to start: ");
+        System.out.println("Enter a Valid Pin to Start: ");
         int enteredPin = sc.nextInt();
         if (enteredPin == pin)
             menu();
         else
-            System.out.println("Entered a valid pin");
+            checkPin();
     }
 
     public static void main(String[] args) {
