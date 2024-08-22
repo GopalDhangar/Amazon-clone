@@ -1,7 +1,6 @@
 package showroommanagementsystem;
 
 import java.util.*;
-//import java.lang.*;
 
 interface utility {
     public void get_details();
@@ -29,7 +28,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Showroom showroom[] = new Showroom[5];
-        Employee employee[] = new Employee[5];
+        Employees employee[] = new Employees[5];
         Cars car[] = new Cars[5];
         int car_counter = 0;
         int showroom_counter = 0;
@@ -52,7 +51,7 @@ public class Main {
                         choice = sc.nextInt();
                         break;
                     case 2:
-                        employee[employees_counter] = new Employee();
+                        employee[employees_counter] = new Employees();
                         employee[employees_counter].set_details();
                         employees_counter++;
                         System.out.println();
