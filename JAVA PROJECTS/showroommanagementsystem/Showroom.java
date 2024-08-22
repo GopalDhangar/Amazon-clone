@@ -1,38 +1,36 @@
 package showroommanagementsystem;
-
+//import java.sql.SQLOutput;
 import java.util.Scanner;
-
-public class Showroom implements utility {
+public class Showroom implements utility{
     String showroom_name;
     String showroom_address;
-    String manager_name;
     int total_employees;
     int total_cars_in_stock = 0;
+    String manager_name;
 
     @Override
     public void get_details() {
-        System.out.println("Showroom Name:" + showroom_name);
-        System.out.println("Showroom Address:" + showroom_address);
-        System.out.println("Showroom Manager Name:" + manager_name);
-        System.out.println("Total Employee:" + total_employees);
-        System.out.println("Total Cars in Showroom:" + total_cars_in_stock);
+        System.out.println("Showroom Name: "+showroom_name);
+        System.out.println("Showroom Address: "+showroom_address);
+        System.out.println("Manager Name: "+manager_name);
+        System.out.println("Total Employees: "+total_employees);
+        System.out.println("Total Cars In Stock: "+total_cars_in_stock);
 
     }
-
     @Override
-    public void set_details() {
+    public void set_details(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("======================= *** ENTER SHOWROOM DETAILS *** ====================");
+        System.out.println("======================= *** ENTER SHOWROOM DETAILS *** =======================");
         System.out.println();
-        System.out.println("Showroom Name: ");
+        System.out.print("SHOWROOM NAME: ");
         showroom_name = sc.nextLine();
-        System.out.println("Showroom Address: ");
+        System.out.print(("SHOWROOM ADDRESS: "));
         showroom_address = sc.nextLine();
-        System.out.println("Manager Name: ");
+        System.out.print("MANAGER NAME: ");
         manager_name = sc.nextLine();
-        System.out.println("Total no of Employees: ");
+        System.out.print("TOTAL NO OF EMPLOYEES: ");
         total_employees = sc.nextInt();
-        System.out.println("Total Cars in Stock: ");
+        System.out.print("TOTAL CARS IN STOCK: ");
         total_cars_in_stock = sc.nextInt();
 
     }
